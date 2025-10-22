@@ -518,9 +518,10 @@ $$
 ### 🔹 최종 경사 하강법 식 (Final Regularized Gradient Descent)
 
 $$
-w_j = w_j - \alpha \left[
+w_j = w_j - \alpha
+\left[
 \frac{1}{m} \sum_{i=1}^m
-\Big( f_{\vec{w},b}(\vec{x}^i) - y^i \Big) x_j^{(i)}
+\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
 + \frac{\lambda}{m} w_j
 \right]
 $$
@@ -528,7 +529,7 @@ $$
 $$
 b = b - \alpha
 \frac{1}{m} \sum_{i=1}^m
-\Big( f_{\vec{w},b}(\vec{x}^i) - y^i \Big)
+\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
 $$
 
 ---
@@ -536,9 +537,9 @@ $$
 ### 🔹 핵심 요약
 
 -   정규화 항은 $w$ 에만 적용되며, $b$ 는 영향을 받지 않음.
--   정규화 계수 $\lambda$ 가 크면 모델이 단순해지고, 작으면 복잡해짐.
+-   정규화 계수 $ \lambda $ 가 크면 모델이 단순해지고, 작으면 복잡해짐.
 -   경사 하강법의 구조는 동일하나,  
-    오직 $w_j$ 의 업데이트 식에 정규화 항이 추가된다.
+    오직 $ w_j $ 의 업데이트 식에 정규화 항이 추가된다.
 
 ---
 
