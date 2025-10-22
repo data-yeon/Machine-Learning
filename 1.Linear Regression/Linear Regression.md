@@ -455,13 +455,7 @@ $$
 
 정규화된 선형 회귀의 비용 함수는 다음과 같다.
 
-$$
-J(\vec{w}, b)
-= \frac{1}{2m} \sum_{i=1}^{m}
-\Big( f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)} \Big)^2
-+ \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2
-$$
-
+$J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
 여기서
 
 -   $\lambda$ : 정규화 계수 (regularization parameter)
