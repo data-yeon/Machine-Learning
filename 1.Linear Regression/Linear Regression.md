@@ -518,10 +518,9 @@ $$
 ### 🔹 최종 경사 하강법 식 (Final Regularized Gradient Descent)
 
 $$
-w_j = w_j - \alpha
-\left[
+w_j = w_j - \alpha \left[
 \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
+\Big( f_{\vec{w},b}(\vec{x}^i) - y^i \Big) x_j^{(i)}
 + \frac{\lambda}{m} w_j
 \right]
 $$
@@ -529,7 +528,7 @@ $$
 $$
 b = b - \alpha
 \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
+\Big( f_{\vec{w},b}(\vec{x}^i) - y^i \Big)
 $$
 
 ---
