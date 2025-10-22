@@ -155,11 +155,11 @@ $$
 
 ![Surface graph of the cost function; plotted against *w* and *b.*](Untitled%201.png)
 
-_비용 함수의 3D 표면 그래프 — $w$와 $b$에 따른 변화_
+_비용 함수의 3D 표면 그래프 — $w$ 와 $b$ 에 따른 변화
 
 ![Contour graph of the cost function; plotted against *w* and *b.*](Screenshot_2023-03-27_212400.png)
 
-_비용 함수의 2D 등고선 그래프 — $w$와 $b$의 최적 조합은 중앙 지점에서 결정됨_
+_비용 함수의 2D 등고선 그래프 — $w$ 와 $b$의 최적 조합은 중앙 지점에서 결정됨_
 
 ---
 
@@ -484,20 +484,11 @@ $$
 
 ### 🔹 비용 함수의 편미분 (Partial Derivatives)
 
-가중치와 편향에 대한 편미분 결과는 아래와 같다.
+가중치와 편향에 대한 편미분 결과는 다음과 같다.
 
-$$
-\frac{\partial}{\partial w_j} J(\vec{w},b)
-= \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
-+ \frac{\lambda}{m} w_j
-$$
+$ \frac{\partial J(\vec{w},b)}{\partial w_j} = \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)} + \frac{\lambda}{m} w_j $
 
-$$
-\frac{\partial}{\partial b} J(\vec{w},b)
-= \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
-$$
+$ \frac{\partial J(\vec{w},b)}{\partial b} = \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
 
 ---
 
@@ -511,21 +502,9 @@ $$
 
 ### 🔹 최종 경사 하강법 식 (Final Regularized Gradient Descent)
 
-$$
-w_j = w_j - \alpha
-\left[
-\frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
-+ \frac{\lambda}{m} w_j
-\right]
-$$
+$ w_j = w_j - \alpha \left[ \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)} + \frac{\lambda}{m} w_j \right] $
 
-$$
-b = b - \alpha
-\frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
-$$
-
+$ b = b - \alpha \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
 ---
 
 ### 🔹 핵심 요약
