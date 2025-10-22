@@ -486,14 +486,18 @@ $$
 
 가중치와 편향에 대한 편미분 결과는 다음과 같다.
 
-$ \frac{\partial J(\vec{w},b)}{\partial w_j}
+$$
+\frac{\partial}{\partial w_j} J(\vec{w},b)
 = \frac{1}{m} \sum_{i=1}^m
 \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
-+ \frac{\lambda}{m} w_j $
++ \frac{\lambda}{m} w_j
+$$
 
-$ \frac{\partial J(\vec{w},b)}{\partial b}
+$$
+\frac{\partial}{\partial b} J(\vec{w},b)
 = \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
+\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
+$$
 
 ---
 
@@ -505,14 +509,21 @@ $ \frac{\partial J(\vec{w},b)}{\partial b}
 
 ### 🔹 최종 경사 하강법 식 (Final Regularized Gradient Descent)
 
-$ w_j = w_j - \alpha \left[
+$$
+w_j = w_j - \alpha
+\left[
 \frac{1}{m} \sum_{i=1}^m
 \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)}
 + \frac{\lambda}{m} w_j
-\right] $
+\right]
+$$
 
-$ b = b - \alpha \frac{1}{m} \sum_{i=1}^m
-\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
+$$
+b = b - \alpha
+\frac{1}{m} \sum_{i=1}^m
+\left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)
+$$
+
 ---
 
 ### 🔹 핵심 요약
