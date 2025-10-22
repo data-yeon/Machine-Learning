@@ -159,7 +159,7 @@ _비용 함수의 3D 표면 그래프 — $w$ 와 $b$ 에 따른 변화
 
 ![Contour graph of the cost function; plotted against *w* and *b.*](Screenshot_2023-03-27_212400.png)
 
-_비용 함수의 2D 등고선 그래프 — $w$ 와 $b$의 최적 조합은 중앙 지점에서 결정됨_
+_비용 함수의 2D 등고선 그래프 — $w$ 와 $b$ 의 최적 조합은 중앙 지점에서 결정됨_
 
 ---
 
