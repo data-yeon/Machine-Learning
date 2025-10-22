@@ -486,25 +486,33 @@ $$
 
 가중치와 편향에 대한 편미분 결과는 다음과 같다.
 
-$ \frac{\partial J(\vec{w},b)}{\partial w_j} = \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)} + \frac{\lambda}{m} w_j $
+$ \\frac{\\partial J(\\vec{w},b)}{\\partial w_j}
+= \\frac{1}{m} \\sum_{i=1}^m
+\\left( f_{\\vec{w},b}(\\vec{x}^i) - y^i \\right)x_j^{(i)}
++ \\frac{\\lambda}{m} w_j $
 
-$ \frac{\partial J(\vec{w},b)}{\partial b} = \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
+$ \\frac{\\partial J(\\vec{w},b)}{\\partial b}
+= \\frac{1}{m} \\sum_{i=1}^m
+\\left( f_{\\vec{w},b}(\\vec{x}^i) - y^i \\right) $
 
 ---
 
 ### 🔹 의미 요약
-
--   $w_j$ 의 미분항에는 **정규화 항 $\frac{\lambda}{m} w_j$** 이 추가된다.
--   $b$ 는 정규화 대상이 아니므로 (편향은 모델 복잡도에 직접적 영향이 적음),  
-    **변경되지 않는다.**
+- $w_j$ 의 미분항에는 **정규화 항 $\\frac{\\lambda}{m}w_j$** 이 추가된다.  
+- $b$ 는 정규화 대상이 아니므로(편향은 모델 복잡도에 직접적 영향이 적음), **변경되지 않는다.**
 
 ---
 
 ### 🔹 최종 경사 하강법 식 (Final Regularized Gradient Descent)
 
-$ w_j = w_j - \alpha \left[ \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right)x_j^{(i)} + \frac{\lambda}{m} w_j \right] $
+$ w_j = w_j - \\alpha \\left[
+\\frac{1}{m} \\sum_{i=1}^m
+\\left( f_{\\vec{w},b}(\\vec{x}^i) - y^i \\right)x_j^{(i)}
++ \\frac{\\lambda}{m} w_j
+\\right] $
 
-$ b = b - \alpha \frac{1}{m} \sum_{i=1}^m \left( f_{\vec{w},b}(\vec{x}^i) - y^i \right) $
+$ b = b - \\alpha \\frac{1}{m} \\sum_{i=1}^m
+\\left( f_{\\vec{w},b}(\\vec{x}^i) - y^i \\right) $
 ---
 
 ### 🔹 핵심 요약
